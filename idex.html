@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seguridad de la Información, Seguridad Informática, Ciberseguridad y Tríada CIA</title>
+  <meta name="description" content="Página informativa sobre Seguridad de la Información, Seguridad Informática, Ciberseguridad y la Tríada CIA (Confidencialidad, Integridad, Disponibilidad)." />
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #111827;
+      --muted: #9aa4b2;
+      --text: #e5e7eb;
+      --accent: #60a5fa;
+      --accent-2: #34d399;
+      --ring: rgba(96,165,250,.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, #1f2937 0%, transparent 50%),
+                  radial-gradient(900px 500px at 110% 10%, #0e7490 0%, transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+
+    header.hero {
+      background: linear-gradient(135deg, rgba(96,165,250,.12), rgba(52,211,153,.12));
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: calc(var(--radius) + 8px);
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .hero h1 { margin: 0 0 10px; font-size: clamp(1.6rem, 3.2vw + .6rem, 2.4rem); letter-spacing: .2px; }
+    .hero p { margin: 0; color: var(--muted); max-width: 70ch; }
+
+    .grid { display: grid; gap: 18px; grid-template-columns: 1fr; margin-top: 22px; }
+    @media (min-width: 880px) { .grid { grid-template-columns: 1.1fr .9fr; } }
+
+    nav.toc {
+      position: sticky; top: 18px;
+      align-self: start;
+      background: rgba(17, 24, 39, .7);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    nav.toc h2 { margin: 0 0 8px; font-size: 1.05rem; }
+    nav.toc a { display: block; padding: 8px 10px; margin: 6px 0; text-decoration: none; color: var(--text); border-radius: 10px; border: 1px solid transparent; }
+    nav.toc a:hover { border-color: var(--ring); background: rgba(96,165,250,.08); }
+
+    section.card {
+      background: rgba(17, 24, 39, .7);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    h2.section-title {
+      margin: 0 0 10px; font-size: clamp(1.25rem, 2.2vw + .6rem, 1.6rem);
+    }
+    .kicker { color: var(--accent); font-weight: 600; text-transform: uppercase; font-size: .85rem; letter-spacing: .08em; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 10px; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(96,165,250,.12), rgba(96,165,250,.04));
+      color: var(--text);
+    }
+
+    ul.check { list-style: none; padding-left: 0; }
+    ul.check li { margin: 10px 0; position: relative; padding-left: 28px; }
+    ul.check li::before {
+      content: ""; position: absolute; left: 0; top: .45em;
+      width: 16px; height: 16px; border-radius: 4px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 2px 10px rgba(96,165,250,.5);
+    }
+
+    .cia-grid { display: grid; gap: 14px; grid-template-columns: 1fr; margin-top: 10px; }
+    @media (min-width: 720px) { .cia-grid { grid-template-columns: repeat(3, 1fr); } }
+    .pill {
+      background: linear-gradient(180deg, rgba(31,41,55,.9), rgba(17,24,39,.85));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .pill h3 { margin: 0 0 6px; }
+    .muted { color: var(--muted); }
+
+    footer {
+      margin: 24px 0 10px; color: var(--muted); font-size: .95rem; text-align: center;
+    }
+    .small { font-size: .9rem; }
+    .cta {
+      margin-top: 8px;
+      display: inline-block; padding: 10px 14px; border-radius: 12px;
+      text-decoration: none; color: var(--text);
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(135deg, rgba(52,211,153,.14), rgba(96,165,250,.12));
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero" id="inicio">
+      <span class="badge">Seguridad · Conceptos Clave</span>
+      <h1>Seguridad de la Información, Seguridad Informática, Ciberseguridad y Tríada CIA</h1>
+      <p>Resumen claro y conciso de los conceptos fundamentales de seguridad. Contenido apto para uso académico, proyectos y presentaciones.</p>
+    </header>
+
+    <div class="grid" style="margin-top: 24px;">
+      <main class="stack" style="display: grid; gap: 18px;">
+        <section id="seg-info" class="card">
+          <div class="kicker">Concepto 1</div>
+          <h2 class="section-title">Seguridad de la Información</h2>
+          <p>La <strong>seguridad de la información</strong> es el conjunto de políticas, procesos y controles orientados a <strong>proteger los datos</strong>—en cualquier formato, físico o digital—contra accesos no autorizados, alteraciones, pérdida o divulgación indebida. Su propósito es preservar tres principios básicos: <em>confidencialidad</em>, <em>integridad</em> y <em>disponibilidad</em>, asegurando que la información sea accesible para quienes deben usarla, mantenga su exactitud y permanezca resguardada frente a terceros.</p>
+          <ul class="check">
+            <li>Alcance integral: cubre personas, procesos, tecnología y activos físicos.</li>
+            <li>Se apoya en políticas, normas y gestión de riesgos.</li>
+            <li>Aplica a todo tipo de información: documentos, bases de datos, respaldos, etc.</li>
+          </ul>
+        </section>
+
+        <section id="seg-informatica" class="card">
+          <div class="kicker">Concepto 2</div>
+          <h2 class="section-title">Seguridad Informática</h2>
+          <p>La <strong>seguridad informática</strong> es la rama técnica de la seguridad de la información enfocada en <strong>proteger sistemas, redes, aplicaciones y dispositivos</strong>. Incluye controles como cortafuegos, antivirus, cifrado, gestión de vulnerabilidades, copias de seguridad y monitoreo. Su objetivo es prevenir <em>malware</em>, accesos indebidos, interrupciones del servicio y fuga de datos.</p>
+          <ul class="check">
+            <li>Controles técnicos: firewalls, IDS/IPS, autenticación multifactor.</li>
+            <li>Buenas prácticas: parchado, principio de menor privilegio, respaldo y recuperación.</li>
+            <li>Enfoque en la continuidad operativa y la resiliencia.</li>
+          </ul>
+        </section>
+
+        <section id="ciberseguridad" class="card">
+          <div class="kicker">Concepto 3</div>
+          <h2 class="section-title">Ciberseguridad</h2>
+          <p>La <strong>ciberseguridad</strong> se centra en la protección de información y servicios expuestos a <strong>entornos conectados</strong> (Internet, redes públicas/privadas y la nube). Abarca estrategias, normativas y defensas contra amenazas como <em>phishing</em>, <em>ransomware</em>, robo de identidad, ataques a aplicaciones web y a la cadena de suministro.</p>
+          <ul class="check">
+            <li>Incluye seguridad en la nube, de endpoints, de aplicaciones y de identidades.</li>
+            <li>Combina tecnología, procesos y concienciación del usuario.</li>
+            <li>Requiere gestión continua de incidentes y respuesta ante ataques.</li>
+          </ul>
+        </section>
+
+        <section id="triada-cia" class="card">
+          <div class="kicker">Modelo Clave</div>
+          <h2 class="section-title">Tríada CIA</h2>
+          <p>La <strong>tríada CIA</strong> es un modelo que guía la protección de la información a través de tres pilares: <strong>Confidencialidad</strong>, <strong>Integridad</strong> y <strong>Disponibilidad</strong>. Estos componentes se aplican a políticas, procesos y controles técnicos para asegurar que los datos estén protegidos, sean exactos y accesibles cuando se requieran.</p>
+
+          <div class="cia-grid">
+            <article class="pill">
+              <h3>Confidencialidad (C)</h3>
+              <p class="muted">Garantiza que solo personas, procesos o sistemas <em>autorizados</em> accedan a la información.</p>
+              <ul class="check">
+                <li>Controles de acceso, autenticación y autorización.</li>
+                <li>Cifrado en tránsito y en reposo.</li>
+                <li>Clasificación y manejo seguro de la información.</li>
+              </ul>
+            </article>
+            <article class="pill">
+              <h3>Integridad (I)</h3>
+              <p class="muted">Asegura que los datos se mantengan <em>íntegros y exactos</em>, sin modificaciones no autorizadas.</p>
+              <ul class="check">
+                <li>Hashing, firmas digitales y controles de cambios.</li>
+                <li>Validación de entradas y registros de auditoría.</li>
+                <li>Copias de seguridad verificadas y versiones.</li>
+              </ul>
+            </article>
+            <article class="pill">
+              <h3>Disponibilidad (A)</h3>
+              <p class="muted">Garantiza que la información y los servicios estén <em>accesibles</em> cuando los usuarios los necesiten.</p>
+              <ul class="check">
+                <li>Redundancia, alta disponibilidad y balanceo de carga.</li>
+                <li>Planes de continuidad, DRP y protección ante fallas.</li>
+                <li>Monitoreo, alertas y escalamiento de incidentes.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="pill" style="margin-top: 14px;">
+            <h3>¿Quiénes conforman la Tríada?</h3>
+            <p class="muted">La conforman tres principios: <strong>Confidencialidad</strong>, <strong>Integridad</strong> y <strong>Disponibilidad</strong>. Juntos orientan el diseño de controles, políticas y métricas de seguridad.</p>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <nav class="toc">
+          <h2>Contenido</h2>
+          <a href="#seg-info">Seguridad de la Información</a>
+          <a href="#seg-informatica">Seguridad Informática</a>
+          <a href="#ciberseguridad">Ciberseguridad</a>
+          <a href="#triada-cia">Tríada CIA</a>
+          <a href="#inicio" class="cta">Volver al inicio</a>
+        </nav>
+      </aside>
+    </div>
+
+    <footer>
+      <p class="small">© 2025 • Página académica para fines educativos.</p>
+    </footer>
+  </div>
+</body>
+</html>
